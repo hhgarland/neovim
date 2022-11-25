@@ -86,14 +86,12 @@ return packer.startup(function(use)
       set sessionoptions+=tabpages,globals " store tabpages and globals in session
     ]]
   end,
-  requires = { { 'hoob3rt/lualine.nvim', opt = true }, {'kyazdani42/nvim-web-devicons', opt = true} }
+  requires = { { 'nvim-lualine/lualine.nvim', opt = true }, {'kyazdani42/nvim-web-devicons', opt = true} }
   }
   
   -- Lualine
-  use {
-    'nvim-lualine/lualine.nvim',
-    requires = { 'kyazdani42/nvim-web-devicons', opt = true }
-  }
+  use 'nvim-lualine/lualine.nvim'
+  use 'nvim-tree/nvim-web-devicons'
 
   -- Utilities
   use 'dhruvasagar/vim-table-mode'
