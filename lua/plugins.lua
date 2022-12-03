@@ -57,7 +57,6 @@ return packer.startup(function(use)
   -- UI & themes
   use 'gruvbox-community/gruvbox'
   use 'lewis6991/gitsigns.nvim'
-  use 'Mofiqul/vscode.nvim'
 
   -- Tabline
   use { 
