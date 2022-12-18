@@ -45,12 +45,14 @@ require('packer').startup(function(use)
   use 'tpope/vim-rhubarb'
   use 'lewis6991/gitsigns.nvim'
 
+  -- Other plugins
   use 'gruvbox-community/gruvbox' -- Gruvbox theme
   use 'nvim-lualine/lualine.nvim' -- Fancier statusline
   use 'lukas-reineke/indent-blankline.nvim' -- Add indentation guides even on blank lines
   use 'numToStr/Comment.nvim' -- "gc" to comment visual regions/lines
   use 'tpope/vim-sleuth' -- Detect tabstop and shiftwidth automatically
   use 'tpope/vim-surround' -- Surround provides mappings to easily delete, change and add such surroundings in pairs
+  use {"shortcuts/no-neck-pain.nvim", tag = "*" } -- Center the currently focused buffer to the middle of the screen
 
 use { -- Fancier tabline
   'kdheepak/tabline.nvim',
