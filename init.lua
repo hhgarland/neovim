@@ -52,7 +52,6 @@ require('packer').startup(function(use)
   use 'numToStr/Comment.nvim' -- "gc" to comment visual regions/lines
   use 'tpope/vim-sleuth' -- Detect tabstop and shiftwidth automatically
   use 'tpope/vim-surround' -- Surround provides mappings to easily delete, change and add such surroundings in pairs
-  use {"shortcuts/no-neck-pain.nvim", tag = "*" } -- Center the currently focused buffer to the middle of the screen
 
 use { -- Fancier tabline
   'kdheepak/tabline.nvim',
@@ -63,8 +62,10 @@ use { -- Fancier tabline
       options = {
       -- If lualine is installed tabline will use separators configured in lualine by default.
       -- These options can be used to override those settings.
-        section_separators = {'', ''},
-        component_separators = {'', ''},
+        -- section_separators = {'', ''},
+        -- component_separators = {'', ''},
+        section_separators = {'', ''},
+        component_separators = {'|', '|'},
         max_bufferline_percent = 66, -- set to nil by default, and it uses vim.o.columns * 2/3
         show_tabs_always = false, -- this shows tabs only when there are more than one tab or if the first tab is named
         show_devicons = true, -- this shows devicons in buffer section
@@ -199,8 +200,10 @@ require('lualine').setup {
   options = {
     icons_enabled = false,
     theme = 'auto',
-    component_separators = { left = '', right = ''},
-    section_separators = { left = '', right = ''},
+    component_separators = { left = '|', right = '|'},
+    section_separators = { left = '', right = ''},
+    -- component_separators = { left = '', right = ''},
+    -- section_separators = { left = '', right = ''},
   },
 }
 
@@ -383,7 +386,7 @@ require('mason').setup()
 
 -- Enable the following language servers
 -- Feel free to add/remove any LSPs that you want here. They will automatically be installed
-local servers = { 'clangd', 'rust_analyzer', 'pyright', 'tsserver', 'sumneko_lua', 'gopls' }
+local servers = { 'clangd', 'rust_analyzer', 'pyright', 'tsserver', 'sumneko_lua', 'gopls', 'tailwindcss' }
 
 -- Ensure the servers above are installed
 require('mason-lspconfig').setup {
