@@ -53,7 +53,16 @@ require('packer').startup(function(use)
   use 'numToStr/Comment.nvim' -- "gc" to comment visual regions/lines
   use 'tpope/vim-sleuth' -- Detect tabstop and shiftwidth automatically
   use 'tpope/vim-surround' -- Surround provides mappings to easily delete, change and add such surroundings in pairs
-  use 'dhruvasagar/vim-table-mode'
+  use 'dhruvasagar/vim-table-mode' -- Table mode
+
+use { -- Mind
+  'phaazon/mind.nvim',
+  branch = 'v2.2',
+  requires = { 'nvim-lua/plenary.nvim' },
+  config = function()
+    require'mind'.setup()
+  end
+}
 
 use { -- Fancier tabline
   'kdheepak/tabline.nvim',
